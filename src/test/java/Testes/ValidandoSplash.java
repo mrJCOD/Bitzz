@@ -47,7 +47,7 @@ public class ValidandoSplash extends Metodos{
 		textoEsperado = "Primeiro acesso ao Bitz";
 		
 		textoRecebido = driver.findElement(By.id("br.com.carson.android.bitz:id/haveAccountTextView")).getText();
-		textoEsperado = "JÃ¡ tenho uma conta";
+		textoEsperado = "Já tenho uma conta";
 		
 		
 

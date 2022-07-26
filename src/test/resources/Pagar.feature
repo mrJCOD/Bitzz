@@ -3,14 +3,14 @@
 Funcionalidade: Pagar usuario
   Eu como usuario quero pagar um outro usuario para sanar minha divida
 
-  @CT01
+  @PAGAR
   Cenario: Pagar usuario via boleto
     Dado que eu esteja na home do App Bitz
     E clico em pagar
     Quando escolho a opção Pagar boleto
     Então o app me direciona para o scanner de boletos
 
-  @CT02
+  @PAGAR1 @Imperativo
   Cenario: Pagar usuario via Qr code
     Dado que eu esteja na home do App Bitz
     E clico em pagar
@@ -29,8 +29,14 @@ Funcionalidade: Pagar usuario
     Quando clico em Confirmar transferencia
     E coloco minha senha de 4 digitos
     Então o app me direciona para uma tela de sucesso
+    
+  @PAGAR1 @Declarativo
+  Cenario: Pagar via QrCode
+  Dado que eu esteja na tela Pagar
+  Quando opto por pagar via QrCode
+  Então o App abre o scanner para ler o QrCode
 
-  @CT03
+  @PAGAR2 @Imperativo
   Cenario: Pagar usuario via transferencia
     Dado que eu esteja na home do App Bitz
     E clico em pagar
@@ -49,3 +55,9 @@ Funcionalidade: Pagar usuario
     Quando clico em Confirmar transferencia
     E coloco minha senha de 4 digitos
     Então o app me direciona para uma tela de sucesso
+    
+  @PAGAR2 @Declarativo
+  Cenario: Pagar via transferencia
+  	Dado que eu esteja na tela Pagar e opto por transferir
+		Quando preencho as informações corretamente
+		Então o app realiza a transferencia

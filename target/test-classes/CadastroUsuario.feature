@@ -4,11 +4,14 @@
 #Senha nao pode conter sequencia numerica ex: 12356
 #Senha nao pode conter repetição do mesmo digito ex: 11111
 
-@CT
+@CADUSUARIO
 Funcionalidade: Cadastrar Usuario pessoa Física
 Eu como usuario quero realizar um cadastro de pessoa fisica para usar o App Bitz
 
-@CT1
+Fundo: que eu esteja no App Bitz
+Dado que eu esteja no App Bitz
+
+@CADUSUARIO1 @Imperativo
 Cenario: Cadastro de usuario com sucesso
 Dado que eu esteja no App da Bitz
 E clico em Meu primeiro acesso
@@ -59,3 +62,12 @@ E seleciono a opção RG
 E clico em continuar
 E clico em Register a Photo
 E tiro a foto da frente do RG
+E tiro a foto do verso do RG
+
+
+@CADUSUARIO2 @Declarativo
+Cenario: Cadastro de novo usuario
+Quando realizo meu cadastro
+Então o App me direciona para tela de Boas vindas
+
+

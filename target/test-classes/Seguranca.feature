@@ -1,9 +1,9 @@
 #language: pt
 #author: mrJCOD
-@CT
+@SEGURANCA
 Funcionalidade: Segurança do menu lateral
 
-  @CT01
+  @SEGURANCA1
   Cenario: Alterar Senha de 4 digitos
     Dado que eu esteja em Segurança
     Quando clico em Alterar transacional e do cartão

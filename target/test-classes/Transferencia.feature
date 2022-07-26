@@ -3,7 +3,7 @@
 Funcionalidade: Transferir Dinheiro
   Eu como usuario quero transferir dinheiro para meu colega
 
-  @CT01
+  @TRANSFERENCIA1 @Imperativo
   Cenario: Transferencia via Bitz para conta corrente
     Dado que eu esteja logado no App
     E clico em Transferir
@@ -22,8 +22,14 @@ Funcionalidade: Transferir Dinheiro
     Quando Confirmo a transferencia
     E digito minha senha
     Então o app me direciona para uma tela de sucesso
+    
+  @TRANSFERENCIA1 @Declarativo
+  Cenario: Transferencia via Bitz para conta corrente
+  	Dado que eu esteja na tela de transferencias
+  	Quando opto por transferir via bitz e preencho as informações com conta corrente
+  	Então o app realiza a transferencia
 
-  @CT02
+  @TRANSFERENCIA2 @Imperativo
   Cenario: Transferencia via Bitz para conta poupança
     Dado que eu esteja logado no App
     E clico em Transferir
@@ -42,11 +48,21 @@ Funcionalidade: Transferir Dinheiro
     Quando Confirmo a transferencia
     E digito minha senha
     Então o app me direciona para uma tela de sucesso
+    
+  @TRANSFERENCIA1 @Declarativo
+  Cenario: Transferencia via Bitz para conta poupança
+  	Dado que eu esteja na tela de transferencias
+  	Quando opto por transferir via bitz e preencho as informações com conta poupança
+  	Então o app realiza a transferencia
 
-  @CT03
-  Cenario: Transferencia via Pix (BUGADO)
+  @TRANSFERENCIA3 @Declarativo
+  Cenario: Transferencia via Pix
+  	Dado que eu esteja na tela de transferencias
+  	Quando clico em Via Pix
+  	Então o app me direciona para a tela Meu pix
+  	
 
-  @CT04
+  @TRANSFERENCIA4 @Imperativo
   Cenario: Transferencia via Bitz para conta poupança inexistente
     (O APP CONTINUA COM OS PASSOS MESMO DIGITANDO UMA CONTA INEXISTENTE)
 
